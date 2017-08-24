@@ -51,8 +51,13 @@ class Home extends React.PureComponent {
                 <section className="container bg-gray">
                     {this.state.onSearch && <BackButton/>}
                     <div className="wraper">
-                        <SearchBar filterBooks={this.filterBooks} reset={this.reset} searchKey={this.state.searchKey}
-                                   onSubmit={this.onSubmit} path={this.props.match}/>
+                        <SearchBar 
+                            filterBooks={this.filterBooks} 
+                            reset={this.reset} 
+                            searchKey={this.state.searchKey}
+                            onSubmit={this.onSubmit} 
+                            path={this.props.match}
+                        />
                         {this.props.books && this.props.books.length ?
                             <div className="row book">{renderBooksList(this.props.books)}</div> :
                             <div>
