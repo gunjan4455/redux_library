@@ -24,7 +24,7 @@ module.exports = Merge(commonConfig, {
                 exclude: /node_modules/,
                 loader: 'babel-loader',
                 query: {
-                    "presets": ["react","es2015","stage-3","react-hmre"]
+                    "presets": ["react","es2015","stage-0","react-hmre"]
                 },
                 include: __dirname
             }

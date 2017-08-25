@@ -13,25 +13,22 @@ class Home extends React.PureComponent {
             noResultFound: false,
             onSearch: false
         };
-        this.filterBooks = this.filterBooks.bind(this);
-        this.reset = this.reset.bind(this);
-        this.onSubmit = this.onSubmit.bind(this);
     }
 
     componentDidMount() {
         this.props.getBooksAsync();
     }
 
-    filterBooks(event) {
-        this.setState({searchKey: event.target.value.toLowerCase()});
+    filterBooks = (event) => {
+        this.setState({searchKey: event.target.value});
     }
 
-    reset() {
+    reset = () => {
         this.setState({searchKey: ''});
         this.props.getBooksAsync();
     }
 
-    onSubmit(e) {
+    onSubmit = (e) => {
         e.preventDefault();
         this.props.history.push(`/search/${this.state.searchKey}`);
     }

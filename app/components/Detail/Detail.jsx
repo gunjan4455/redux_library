@@ -5,7 +5,7 @@ import ConfirmationModal from "../shared/ConfirmationModal";
 import BackButton from '../shared/BackButton';
 import BookCover from '../shared/BookCover';
 
-class LibraryDetail extends React.Component {
+class LibraryDetail extends React.PureComponent {
     constructor(props) {
         super(props);
         this.state = {
@@ -13,9 +13,6 @@ class LibraryDetail extends React.Component {
             showDetailModal: false,
             showConfirmation: false
         };
-        this.closeModal = this.closeModal.bind(this);
-        this.showInfo = this.showInfo.bind(this);
-        this.onEdit = this.onEdit.bind(this);
     }
 
     componentDidMount() {
@@ -23,15 +20,15 @@ class LibraryDetail extends React.Component {
         this.setState({showConfirmation: this.props.isSuccess});
     }
 
-    closeModal() {
+    closeModal = () =>  {
         this.setState({showDetailModal: false})
     }
 
-    showInfo() {
+    showInfo = () => {
         this.setState({showDetailModal: !this.state.showDetailModal})
     }
 
-    onEdit(formData) {
+    onEdit = (formData) => {
         this.props.editBookById(this.props.match.params.id, formData);
     }
 

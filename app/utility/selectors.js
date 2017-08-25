@@ -7,5 +7,5 @@ const getFilteringParams = (state, props) => props.match.params && props.match.p
 
 export const getBooks = createSelector(
     [getFilteredBooks, getFilteringParams],
-    (books, searchKey) => _.filter(books, (book) => book.title.toLowerCase().search(searchKey) !== -1)
+    (books, searchKey) => _.filter(books, (book) => book.title.toLowerCase().search(searchKey.toLowerCase()) !== -1)
 );
