@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 process.traceDeprecation = true;
 module.exports = {
     devtool: 'eval-source-map',
-    entry: ['babel-polyfill',
+    entry: ['whatwg-fetch','babel-polyfill',
         path.join(__dirname, 'app/main.js')
     ],
     output: {
