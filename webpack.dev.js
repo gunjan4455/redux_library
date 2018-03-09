@@ -14,12 +14,7 @@ module.exports = Merge(commonConfig, {
     ],
     module: {
         loaders: [
-            {
-                enforce: "pre",
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: "eslint-loader"
-            },{
+           {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader',

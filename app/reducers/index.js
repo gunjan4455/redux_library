@@ -11,9 +11,11 @@
 
 import { combineReducers } from 'redux';
 import { booksReducer as library } from './book';
+import { gameReducer as game } from './tictactoe';
 
 const rootReducer = combineReducers({
-    library
+    library,
+    game
 });
 
 export default rootReducer;

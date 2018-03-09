@@ -9,3 +9,6 @@ export const GET_BOOKS = 'GET_BOOKS';
 
 export const GET_BOOK_BY_ID = 'GET_BOOK_BY_ID';
 export const EDIT_BOOK = 'EDIT_BOOK';
+
+export const SELECT_CHANCE = 'SELECT_CHANCE';
+export const RESET_GAME = 'RESET_GAME';
